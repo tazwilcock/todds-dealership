@@ -1,0 +1,26 @@
+header,
+nav,
+main,
+footer {
+  max-width: 75rem;
+  margin: auto;
+}
+
+main {
+  .heroParent {
+    h2 {
+      font-size: 35px;
+    }
+  }
+
+  .cardContainer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .reviews {
+    #cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

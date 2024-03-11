@@ -1,0 +1,316 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  height: 100%;
+}
+
+/*---- apply a natural box layout model to all elements -------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $baseFontFamily;
+  height: 100%;
+  font-weight: $base;
+  font-size: 16px;
+}
+
+#headerWrapper {
+  background-color: #08415c;
+}
+
+header {
+  display: flex;
+  padding: 8px $gutter;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  .phoneNumber {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: $peach;
+  }
+}
+
+#navWrapper {
+  background-color: $teal;
+  padding-top: 10px;
+}
+
+nav {
+  button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    padding-bottom: 10px;
+    padding-left: 15px;
+  }
+
+  button span:nth-child(1) {
+    display: block;
+  }
+  button span:nth-child(2) {
+    display: none;
+  }
+  button.open span:nth-child(1) {
+    display: none;
+  }
+  button.open span:nth-child(2) {
+    display: block;
+  }
+
+  #xBtn {
+    padding-left: 5px;
+  }
+
+  ul {
+    padding-inline-start: 0px;
+    display: none;
+    border-top: solid 1px rgba(255, 255, 255, 0.2);
+
+    li.active a {
+      background-color: darken($menuColor, 8%);
+    }
+  }
+
+  ul.open {
+    display: block;
+    margin: 0;
+  }
+
+  ul li a:hover {
+    background-color: darken($menuColor, 4%);
+  }
+
+  li {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    list-style-type: none;
+    a {
+      display: block; // this is to be able to apply padding
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0.9rem;
+    }
+  }
+}
+
+main {
+  padding: 0.5rem $gutter 2rem;
+
+  .heroParent {
+    margin: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    h2 {
+      position: absolute;
+      top: 35%;
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      font-family: $headingFont;
+      font-weight: 800;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(226, 240, 221, 1) 26%,
+        rgba(228, 241, 223, 1) 74%,
+        rgba(255, 255, 255, 0.008862920168067223) 100%
+      );
+    }
+  }
+  h1 {
+    color: $darkBlue;
+    margin: 0;
+    padding-bottom: 7px;
+    padding-top: 20px;
+  }
+  p {
+    margin: 0;
+    color: $darkBlue;
+    padding-bottom: 30px;
+  }
+
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+
+    .singleCard {
+      border: 2px $teal solid;
+      text-align: center;
+      border-radius: 10px;
+      padding: 25px $gutter;
+
+      img {
+        position: relative;
+      }
+
+      button {
+        margin-top: 20px;
+        background-color: $darkBlue;
+        border-radius: 30px;
+        color: white;
+        padding: 10px 35px;
+        border: 1px solid $teal;
+        font-size: 1.1rem;
+        box-shadow: 1px 1px 1px $darkBlue;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: $teal;
+      }
+    }
+
+    // Animations
+    .bounce:hover img {
+      animation: myBounce 1s 1;
+    }
+    .spin:hover img {
+      animation: mySpin 3s 1;
+    }
+
+    .pulse:hover img {
+      animation: myPulse 1s 1;
+    }
+
+    .color:hover img {
+      animation: myColor 5s 3;
+    }
+
+    @keyframes myBounce {
+      0% {
+        bottom: 0px;
+        animation-timing-function: ease-in;
+      }
+      25% {
+        bottom: 25px;
+        animation-timing-function: ease-out;
+      }
+      50% {
+        bottom: -50px;
+        animation-timing-function: ease-in;
+      }
+      75% {
+        bottom: 17px;
+        animation-timing-function: ease-out;
+      }
+      100% {
+        bottom: 0px;
+        animation-timing-function: ease-in;
+      }
+    }
+
+    @keyframes mySpin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(720deg);
+      }
+    }
+
+    @keyframes myPulse {
+      0% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.5);
+      }
+      50% {
+        transform: scale(0.75);
+      }
+      75% {
+        transform: scale(1.25);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes myColor {
+      0% {
+        background-color: gainsboro;
+      }
+      15% {
+        background-color: gray;
+      }
+      25% {
+        background-color: azure;
+      }
+      50% {
+        background-color: antiquewhite;
+      }
+      75% {
+        background-color: gray;
+      }
+      100% {
+        background-color: antiquewhite;
+      }
+    }
+  }
+
+  // Reviews Styling
+  .reviews {
+    background-color: $darkBlue;
+    color: white;
+    border-radius: 20px;
+    padding: 2rem $gutter;
+    margin: 2rem $gutter;
+    text-align: center;
+    h2 {
+      font-size: 35px;
+      color: $peach;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+    #cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      section {
+        img {
+          width: 20px;
+        }
+      }
+      h3 {
+        font-size: 23px;
+        opacity: 0.5;
+        margin: 2rem $gutter 0.5rem $gutter;
+      }
+      p {
+        color: white;
+        max-width: 500px;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin: auto;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+#footerWrapper {
+  background-color: $darkBlue;
+}
+
+footer {
+  padding: 0.7rem $gutter;
+  color: white;
+  text-align: center;
+  p {
+    margin: 0;
+    font-weight: $extraLight;
+  }
+}

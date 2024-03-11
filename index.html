@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Title -->
+    <title>Todd's Wheels and Steals | Taz Wilcock</title>
+    <!-- Description and Author -->
+    <meta name="description" content="Todd's Wheels and Steals" >
+    <meta name="author" content="Taz Wilcock" >
+    <!-- UTF8 and Viewport Width -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
+  
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.min.css" >
+
+    <!-- Google Fonts -->
+    <!-- Base -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <!-- Headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head> <!-- HEAD TAG END --> 
+
+<body>
+    <div id="headerWrapper">
+      <header>
+        <a href="#"><img src="images/logo1x.png" width="175" height="80" alt="todd's dealership logo" srcset="images/logo1x.png 1x,
+             images/logo2x.png 2x,
+             images/logo3x.png 3x"/></a>
+             <a class="phoneNumber" href="tel:5555555555">(555) 555-5555</a>
+      </header>
+    </div>
+
+    <div id="navWrapper">
+    <nav>
+        <button id="hamburgerBtn"><span>&#9776</span><span id="xBtn">x</span></button>
+        <ul id="primaryNav">
+        <li><a href="#">Trucks</a>
+        <li><a href="#">Vans</a></li>
+        <li class="active"><a href="#">SUV's</a></li>
+        <li><a href="#">Cars</a></li>
+        <li><a href="#">Tractors</a></li>
+    </ul>
+    </nav>
+</div> <!-- end nav wrapper -->
+
+    <div id="mainWrapper">
+      <main>
+        <div class="heroParent">
+            <img src="images/heroimg.jpeg" width="1200" height="700" alt="toyota highlander 2010">
+            <h2>Test Drive Our Amazingly<br> Priced Selection Today!</h2>
+        </div>
+
+        <h1>SUV's</h1>
+        <p>
+            You might choose to buy an SUV for its robust performance in various driving conditions, including adverse weather and rough terrains, its spaciousness, and the sense of security it offers. Furthermore, the modern SUV has evolved to include more fuel-efficient models and luxurious features, broadening their appeal for those seeking a vehicle that effectively combines practicality with style and comfort.</p>
+
+            <div class="cardContainer">
+              <div class="singleCard bounce">
+                <img src="images/dmnd.svg" alt="trucks" width="100" height="100">
+                <h3>Trucks</h3>
+                <div>You know what a big truck does to a man. Why not let a big truck treat you the way you deserve to be treated, purchase one today.</div>
+                <button>Inventory</button>
+              </div>
+
+              <div class="singleCard spin">
+                <img src="images/truck.svg" alt="Vans" width="100" height="100">
+                <h3>Vans</h3>
+                <div>It's less about the van and more about where it can take you. From Acadia National Park in Maine to Yosemite Valley California. Puffins and rocks await you.</div>
+                <button>Inventory</button>
+              </div>
+
+              <div class="singleCard pulse">
+                <img src="images/book.svg" alt="Vans" width="100" height="100">
+                <h3>Cars</h3>
+                <div>Good cars sell here like candy. Sweet rides for cruising the highway to happiness; Or just taking your little sister to choir practice.</div>
+                <button>Inventory</button>
+              </div>
+
+              <div class="singleCard color">
+                <img src="images/road.svg" alt="Vans" width="100" height="100">
+                <h3>Tractors</h3>
+                <div>When I met my wife in the potato fields of Idaho, she was riding a tractor. Buy a tractor today and meet the love of your life.</div>
+                <button>Inventory</button>
+              </div>
+            </div>
+
+            <section class="reviews">
+              <h2>What People I've Sold To Have to Say</h2>
+              <div id="cards"></div>
+            </section>
+      </main>
+    </div>
+
+    <div id="footerWrapper">
+      <footer>
+        <p class="legal">&copy; <span id="year">XV</span> &bull; Taz Wilcock</p>
+      </footer>
+    </div>
+
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>
