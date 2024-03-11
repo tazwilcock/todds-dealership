@@ -1,6 +1,6 @@
 export const reviews = [
   {
-    name: "Austeen Tanner",
+    name: "Austeen Tanman",
     stars: 5,
     text: "I have 12 cars that I've happily purchased from Todd and will probably never buy from anyone else again.",
   },
